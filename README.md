@@ -19,7 +19,7 @@ DiveFace files: [.zip] (available soon)
 
 ## How to use DiveFace:
 
-a) Download Megaface training set (Tightly Cropped - Face detection box region only) at: http://megaface.cs.washington.edu/dataset/download/content/identities_tight_cropped.tar.gz
+1) Download Megaface training set (Tightly Cropped - Face detection box region only) at: http://megaface.cs.washington.edu/dataset/download/content/identities_tight_cropped.tar.gz
 
-b) 
+2) Each DiveFace file contains 4K identities belonging to each of the six classes (number of images varies among identities). Annotations are included in the .txt files according to the following format: identity_folder_name/file_name 
 

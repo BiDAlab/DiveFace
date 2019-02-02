@@ -17,7 +17,7 @@ Please cite [1] below if you make use of the dataset:
 
 DiveFace files: [.zip] (available soon)
 
-How to use DiveFace:
+## How to use DiveFace:
 
 a) Download Megaface training set (Tightly Cropped - Face detection box region only) at: http://megaface.cs.washington.edu/dataset/download/content/identities_tight_cropped.tar.gz
 

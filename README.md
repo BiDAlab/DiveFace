@@ -13,6 +13,8 @@ Please cite [1] below if you make use of the dataset:
 
 [1] A. Morales, J. Fierrez, R. Vera-Rodriguez. SensitiveNets: Learning Agnostic Representations with Application to Face Recognition. arXiv (available soon), 2019.
 
+##Download:
+
 DiveFace files: [.zip] (available soon)
 
 How to use DiveFace:

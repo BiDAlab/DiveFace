@@ -27,7 +27,7 @@ re-distribution of the dataset in any form.
 
 ## How to use DiveFace:
 
-1) Download Megaface training set (Tightly Cropped - Face detection box region only) at: http://megaface.cs.washington.edu/dataset/download/content/identities_tight_cropped.tar.gz
+1) Download Megaface training set (Tightly Cropped - Face detection box region only) at: http://megaface.cs.washington.edu/dataset/download/content/identities_tight_cropped.tar.gz . Meface is property of the University of Washington. Please, read carefully the licence here: http://megaface.cs.washington.edu/dataset/download_training.html
 
 2) Each DiveFace file contains 4K identities belonging to each of the six classes (number of images varies among identities). Annotations are included in the .txt files according to the following format: identity_folder_name/file_name 
 

@@ -1,4 +1,4 @@
-# DiveFace  ![alt text](https://github.com/BiDAlab/DiveFace/blob/master/logo50.png "Logo Title Text 0")
+# DiveFace                                                  ![alt text](https://github.com/BiDAlab/DiveFace/blob/master/logo50.png "Logo Title Text 0")
 
 ## A dataset to train unbiased and discrimination-aware face recognition algorithms ![alt text](https://github.com/BiDAlab/DiveFace/blob/master/pexels-photo-1282270.jpeg "Logo Title Text 1")
 

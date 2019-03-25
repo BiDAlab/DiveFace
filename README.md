@@ -1,6 +1,6 @@
 # DiveFace
 
-## A dataset to train unbiased and discrimination-aware face recognition algorithms ![alt text](https://github.com/BiDAlab/DiveFace/blob/master/pexels-photo-1282270.jpeg "Logo Title Text 1")
+## A dataset to train unbiased and discrimination-aware face recognition algorithms ![alt text](http:// http://atvs.ii.uam.es/atvs/pexels-photo-1282270.jpeg "Logo Title Text 1")
 
 
 DiveFace contains annotations equally distributed among six classes related to gender and ethnicity (male, female and three ethnic groups). Gender and ethnicity have been annotated following a semi-automatic process. There are 24K identities (4K for class). The average number of images per identity is 5.5 with a minimum number of 3 for a total number of images greater than 150K. Users are grouped according to their gender (male or female) and three categories related with ethnic physical characteristics:

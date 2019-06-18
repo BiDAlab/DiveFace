@@ -19,7 +19,7 @@ Please cite [1] below if you make use of the dataset:
 
 ## Download:
 
-DiveFace files: [.zip] (available soon)
+DiveFace files: "**files**" folder and "**create_diveface.py**" script
 
 Downloading this dataset implies agreement to follow the same
 conditions of non-commercial research for any modification and/or
@@ -27,11 +27,23 @@ re-distribution of the dataset in any form.
 
 ## How to use DiveFace:
 
-1) Download Megaface training set (Tightly Cropped - Face detection box region only) at: http://megaface.cs.washington.edu/dataset/download/content/identities_tight_cropped.tar.gz . Meface is property of the University of Washington. Please, read carefully the licence here: http://megaface.cs.washington.edu/dataset/download_training.html
+1) Download Megaface training set (Tightly Cropped - Face detection box region only). Meface is property of the University of Washington. Please, read carefully the licence here: http://megaface.cs.washington.edu/dataset/download_training.html
 
 2) Each DiveFace file contains 4K identities belonging to each of the six classes (number of images varies among identities). Annotations are included in the .txt files according to the following format: identity_folder_name/file_name 
 
+3) Download create_diveface.py script and DiveFace files on the same directory.
 
+4) To create DiveFace run the script:
+
+   ``
+      python3 create_diveface.py --mega <PATH_TO_MEGAFACE> --dive <PATH_TO_DIVEFACE> 
+   ``
+   
+   This will create the full database. But if you want to have the balanced one (3 images per user) run the script with -b:
+   
+   ``
+      python3 create_diveface.py --mega <PATH_TO_MEGAFACE> --dive <PATH_TO_DIVEFACE> -b
+   ``
 
 Additionally any entity using this dataset agrees to the following conditions:
 

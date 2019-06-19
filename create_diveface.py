@@ -24,14 +24,14 @@ if not os.path.exists(args.mega) or os.path.exists(args.dive):
     exit()
     
 # Classes definition    
-db_classes = ("AM","BM","CM","AF","BF","CF") # [ Asian | Black | Caucasian , Male | Female ]
+db_classes = ("Group1_Male","Group2_Male","Group3_Male","Group1_Female","Group2_Female","Group3_Female") 
 
 # For each class, check if the photos file exists
 for class_name in db_classes:
     # If -b argument : Use the reduced files
     if args.balanced:
-        if not os.path.exists("files/"+class_name+"_3.txt"):
-            print("\nFile \"files/"+class_name+"_3.txt\" missing.")
+        if not os.path.exists("files/"+class_name+"_balanced.txt"):
+            print("\nFile \"files/"+class_name+"_balanced.txt\" missing.")
             exit()
     # Else use the completed files
     else:
@@ -52,7 +52,7 @@ for class_name in db_classes:
         
     # Choose the file
     if args.balanced:
-        file = open("files/"+class_name + "_3.txt","r")
+        file = open("files/"+class_name + "_balanced.txt","r")
     else:
         file = open("files/"+class_name + ".txt","r")
     

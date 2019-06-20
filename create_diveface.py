@@ -77,9 +77,9 @@ for class_name in db_classes:
     # Loop that copy the files
     for index, user in enumerate(dict_users):
         if args.balanced:
-            s = "\r{:.4}% Complete   Class: {}       ".format((index)*100*3/len(lines),class_name)
+            s = "\r{:.4}% Complete   Class: {}       ".format((index)*100*3/len(dict_users),class_name)
         else:
-            s = "\r{:.4}% Complete   Class: {}       ".format((index)*100/len(lines),class_name)
+            s = "\r{:.4}% Complete   Class: {}       ".format((index)*100/len(dict_users),class_name)
         sys.stdout.write(s)
         
         # If the folder doesnt exist, its created

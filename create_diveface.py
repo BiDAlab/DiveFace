@@ -24,20 +24,13 @@ if not os.path.exists(args.mega) or os.path.exists(args.dive):
     exit()
     
 # Classes definition    
-db_classes = ("Group1_Male","Group2_Male","Group3_Male","Group1_Female","Group2_Female","Group3_Female") 
+db_classes = ("Group1_Male",) #,"Group2_Male","Group3_Male","Group1_Female","Group2_Female","Group3_Female") 
 
 # For each class, check if the photos file exists
 for class_name in db_classes:
-    # If -b argument : Use the reduced files
-    if args.balanced:
-        if not os.path.exists("files/"+class_name+"_balanced.txt"):
-            print("\nFile \"files/"+class_name+"_balanced.txt\" missing.")
-            exit()
-    # Else use the completed files
-    else:
-        if not os.path.exists("files/"+class_name+".txt"):
-            print("\nFile \"files/"+class_name+".txt\" missing.")
-            exit()
+    if not os.path.exists("files/"+class_name+".txt"):
+        print("\nFile \"files/"+class_name+".txt\" missing.")
+        exit()
         
 # If DiveFace folder doesnt exist, its created        
 if not os.path.exists(args.dive):
@@ -51,30 +44,56 @@ for class_name in db_classes:
         os.mkdir(dest_path)
         
     # Choose the file
-    if args.balanced:
-        file = open("files/"+class_name + "_balanced.txt","r")
-    else:
-        file = open("files/"+class_name + ".txt","r")
+    file = open("files/"+class_name + ".txt","r")
     
     # Read the content
     lines = file.readlines()
+     # Close the class file and continue the loop    
+    file.close()
+    
+    # User Dictionary
+    dict_users = {}
+
+    for line in lines:
+        # Split to get the user and the image
+        splited = line.split("/")
+        
+        # If the value is empty, create a new list
+        if dict_users.get(splited[0]) == None:
+            tmp = []
+            tmp.append(splited[1])
+            dict_users[splited[0]]=tmp
+        else:
+            tmp = dict_users[splited[0]] 
+            # Else if not balanced, add all
+            if not args.balanced:
+                tmp.append(splited[1])
+                dict_users[splited[0]]=tmp
+            elif len(tmp) != 3:
+                # Else if has less than 3, add until it has 3
+                tmp.append(splited[1])
+                dict_users[splited[0]]=tmp
    
     # Loop that copy the files
-    for index,line in enumerate(lines):
-        s = "\r{:.4}% Complete   Class: {}       ".format((index)*100/len(lines),class_name)
+    for index, user in enumerate(dict_users):
+        if args.balanced:
+            s = "\r{:.4}% Complete   Class: {}       ".format((index)*100*3/len(lines),class_name)
+        else:
+            s = "\r{:.4}% Complete   Class: {}       ".format((index)*100/len(lines),class_name)
         sys.stdout.write(s)
-        arr = line.split("/")
         
         # If the folder doesnt exist, its created
-        if not os.path.exists(os.path.join(dest_path, arr[0])):
-            os.mkdir(os.path.join(dest_path, arr[0]))
+        if not os.path.exists(os.path.join(dest_path, user)):
+            os.mkdir(os.path.join(dest_path, user))
         
-        # Copy the file
-        shutil.copy(os.path.join(args.mega,line[:-1] ), os.path.join(dest_path,line[:-1]))
+        for img in dict_users.get(user):
+            if img[-1] == "\n":
+                img = img[:-1]
+            # Copy the file
+            shutil.copy(os.path.join(args.mega,user,img ), os.path.join(dest_path,user,img))
         
     print()
 
-    # Close the class file and continue the loop    
-    file.close()
+   
     
         

@@ -24,7 +24,7 @@ if not os.path.exists(args.mega) or os.path.exists(args.dive):
     exit()
     
 # Classes definition    
-db_classes = ("Group1_Male",) #,"Group2_Male","Group3_Male","Group1_Female","Group2_Female","Group3_Female") 
+db_classes = ("Group1_Male","Group2_Male","Group3_Male","Group1_Female","Group2_Female","Group3_Female") 
 
 # For each class, check if the photos file exists
 for class_name in db_classes:

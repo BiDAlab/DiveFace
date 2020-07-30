@@ -60,7 +60,7 @@ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-## IMPORTANT: Meface dataset is not longer distributed by the University of Washington. We are leaveraging DiveFace images from the original dataset (Flickr 100M dataset). We will add the images soon. Authors are not responsible of the usage of the datataset. Nowadays, there are important concerns about the usage of public database to train face recognition technologies without explicit consent. We are aware of these concerns, and new regulations are expected to be more specific about these usages. 
+### IMPORTANT: Meface dataset is not longer distributed by the University of Washington. We are leaveraging DiveFace images from the original dataset (Flickr 100M dataset). We will add the images soon. Authors are not responsible of the usage of the datataset. Nowadays, there are important concerns about the usage of public database to train face recognition technologies without explicit consent. We are aware of these concerns, and new regulations are expected to be more specific about these usages. 
 
 ## Contact:
 

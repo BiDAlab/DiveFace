@@ -16,7 +16,7 @@ We are aware about the limitations of grouping all human ethnic origins into onl
 
 Please cite [1] below if you make use of the dataset:
 
-[1] A. Morales, J. Fierrez, R. Vera-Rodriguez. SensitiveNets: Learning Agnostic Representations with Application to Face Recognition. arXiv:1902.00334, 2019. [[pdf](https://arxiv.org/ftp/arxiv/papers/1902/1902.00334.pdf)]
+[1] A. Morales, J. Fierrez, R. Vera-Rodriguez, R. Tolosana. SensitiveNets: Learning Agnostic Representations with Application to Face Images. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2020. [[pdf](https://arxiv.org/ftp/arxiv/papers/1902/1902.00334.pdf)]
 
 ## Download:
 
